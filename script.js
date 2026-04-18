@@ -15,7 +15,10 @@ function getHumanChoice () {
   return humanChoice.toLowerCase();
 }
 
-  let computerScore = 0;
+ 
+  function playGame () {
+
+ let computerScore = 0;
   let humanScore = 0;
 
 function playRound (humanChoice, computerChoice) {
@@ -37,11 +40,8 @@ function playRound (humanChoice, computerChoice) {
   }
 
   }
-
-
-  function playGame () {
-
   
+
   for (let i = 0; i < 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
@@ -49,6 +49,7 @@ function playRound (humanChoice, computerChoice) {
 
 }
 }
+
 
 playGame();
 
