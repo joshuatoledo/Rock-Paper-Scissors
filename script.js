@@ -39,6 +39,19 @@ function playRound (humanChoice, computerChoice) {
   }
 
 
+  function playGame () {
+
+  
+  for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    console.log(playRound(humanSelection, computerSelection));
+
+}
+}
+
+playGame();
+
 
 
 
