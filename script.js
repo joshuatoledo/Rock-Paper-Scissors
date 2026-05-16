@@ -16,28 +16,38 @@ function getHumanChoice () {
 }
 
  
-  function playGame () {
+function playGame () {
 
  let computerScore = 0;
   let humanScore = 0;
+ 
 
 function playRound (humanChoice, computerChoice) {
+   let result = "";
   if (humanChoice === computerChoice) {
-    return "It's a tie!";
+    result =  "It's a tie!";
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
     humanScore++;
-    return "You win! Rock beats scissors.";
+    result =  "You win! Rock beats scissors.";
   } else if (humanChoice === "paper" && computerChoice === "rock") {
     humanScore++;
-    return "You win! Paper beats rock.";
+     result = "You win! Paper beats rock.";
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
     humanScore++;
-    return "You win! Scissors beats paper.";
+    result =  "You win! Scissors beats paper.";
   } else {
     computerScore++;
-    return 'You Lose Computer Wins'
+    result =  'You Lose Computer Wins'
     
   }
+
+    const div = document.createElement('div');
+    div.textContent = result;
+
+    const scoreDiv = document.createElement('div');
+    scoreDiv.textContent = 'human' + humanScore + " | computer " + computerScore;
+
+   
 
   }
   
@@ -49,6 +59,12 @@ playGame();
 
 
 
+const rock = document.createElement('button');
+rock.textContent = 'rock';
+const paper = document.createElement('button');
+paper.textContent = 'paper';
+const scissors = document.createElement('button');
+scissors.textContent = 'scissor';
 
 
 
