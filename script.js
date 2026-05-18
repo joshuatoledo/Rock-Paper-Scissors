@@ -35,17 +35,19 @@ function hasPlayerWonTheRound(player, computer) {
   }
 };
 
-
-function showResults(userOption) {
-
-  const div = document.createElement('div');
-  div.textContent = getRoundResults(userOption);
+const div = document.createElement('div');
   document.body.appendChild(div);
 
-  const scoreDiv = document.createElement('div');
-    scoreDiv.textContent = 'human ' + humanScore + " | computer " + computerScore;
-    document.body.appendChild(scoreDiv);
+const scoreDiv = document.createElement('div');
+document.body.appendChild(scoreDiv);
 
+
+function showResults(userOption) {
+  const roundmessage = getRoundResults(userOption);
+  div.textContent = roundmessage;
+
+  scoreDiv.textContent = 'human ' + humanScore + " | computer " + computerScore;
+    
 
   if (humanScore === 3 || computerScore === 3) {
     scoreDiv.textContent =`${
