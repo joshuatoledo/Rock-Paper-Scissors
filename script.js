@@ -49,13 +49,15 @@ function showResults(userOption) {
   scoreDiv.textContent = 'human ' + humanScore + " | computer " + computerScore;
     
 
-  if (humanScore === 3 || computerScore === 3) {
-    scoreDiv.textContent =`${
-      humanScore === 3 ? "Player" : "Computer"
-    } has won the game!`;
-
+  if (humanScore === 5 || computerScore === 5) {
+      if(humanScore === 5){
+        scoreDiv.textContent = "Player has won the game! ";
+      }
+      else {
+        scoreDiv.textContent = "Computer has won the game! ";
+      }
+    
   }
-
 };
 
   
