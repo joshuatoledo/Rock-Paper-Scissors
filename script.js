@@ -10,7 +10,7 @@ function getComputerChoice () {
 
 }
 
-function hasPlayerWonTheRound(player, computer) {
+function playRound(player, computer) {
   return (
     (player === "rock" && computer === "scissors") ||
     (player === "scissors" && computer === "paper") ||
@@ -24,7 +24,7 @@ function hasPlayerWonTheRound(player, computer) {
  function getRoundResults(userOption) {
   const computerResult = getComputerChoice();
 
-  if (hasPlayerWonTheRound(userOption, computerResult)) {
+  if (playRound(userOption, computerResult)) {
     humanScore++;
     return `Player wins! ` + userOption +  ' beats ' + computerResult;
   } else if (computerResult === userOption) {
